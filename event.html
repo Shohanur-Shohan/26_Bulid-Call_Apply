@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>My item</li>
+        <li>Lorem ipsum dolor sit amet.</li>
+        <li>Consequuntur quod a quos est.</li>
+        <li onclick="this.innerText='changed text'">Quis quisquam rerum quidem. Molestiae.</li>
+        <li onclick="clickText(event)">Odit ipsum rerum sed ab?</li>
+        <li id="clickThis">Commodi atque neque maiores inventore?</li>
+    </ul>
+
+
+<script>
+    function clickText(event){
+        console.log(event.target.innerText);
+    }
+    document.getElementById('clickThis').addEventListener('click', clickText )
+</script>
+</body>
+</html>

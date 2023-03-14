@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="this.innerText = 'i clicked'">Not Confused anymore</h1>
+
+
+
+<script>
+    // obj1
+    const myObj = {
+        name: 'shohanur',
+        getFullName: function(){
+            console.log(this);
+            return 'i am' + this.name;
+        }
+
+    }
+    myObj.getFullName();
+    // obj2
+    const anotherObj = {
+        name: 'samiul',
+    }
+    // anotherObj.getFullName = myObj.getFullName;
+    // console.log(anotherObj.getFullName);
+    // myObj.getFullName();
+    // anotherObj.getFullName();
+
+    // example
+    function add(a, b){
+        console.log(this);
+        return a + b;
+    }
+    add(20, 30);
+
+    anotherObj.sum = add;
+    anotherObj.sum();
+
+
+</script>
+</body>
+</html>
